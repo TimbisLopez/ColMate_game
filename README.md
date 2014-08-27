@@ -1,2 +1,2 @@
-ColMate_game
+connect_game
 ============

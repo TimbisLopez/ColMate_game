@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css" />
+
+</head>
+<body>
+    <div class="container">
+ 	    <!-- IN GAME - PAGE -->
+		<div id="juego">
+			<div class="row">
+        		<div class="col-sm-12">
+					<div class="text-center">
+        				<div id="contenedorPuntaje"><li id="puntos">0</div>
+        				<div id="contenedorMultiplicador"><li id="multiplicador">x1</li></h3></div>
+					</div>
+				</div>				
+			</div>
+			<div class="row">
+				<div class="text-center">
+        			<div id="tutorial"><p>"Sumá dos números y desaparecerán con su resultado."</p></div>
+				</div>				
+			</div>
+			<div class="row">
+        		<div class="col-sm-12">
+					<div id="numeros" >
+
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="text-center">
+					<a class="btn btn-primary" id="jugar" ><i class="fa fa-play"></i> </a>
+					<div id="compartir" class="fb-like" data-href="https://apps.facebook.com/colmate/" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+				</div>
+			</div>
+			<div class="row">
+				<a class="btn btn-primary" id="resetear"><i class="fa fa-refresh"></i></a>
+			</div>
+		</div>
+		<div id="conectF">
+			<div id="circularG" style="display:none">
+				<div id="circularG_1" class="circularG"></div><div id="circularG_2" class="circularG"></div><div id="circularG_3" class="circularG"></div><div id="circularG_4" class="circularG"></div><div id="circularG_5" class="circularG"></div><div id="circularG_6" class="circularG"></div><div id="circularG_7" class="circularG"></div><div id="circularG_8" class="circularG"></div>
+			</div> 
+			<button id="loginB" type="button" class="btn btn-primary" style="display:none">Conectar FB</button>
+			<button id="logoutB" type="button" class="btn btn-primary" style="display:none">Desconectar FB</button>
+			<p class="text-danger">Debes aceptar ambos permisos para poder guardar tu puntaje.</p>
+		</div>
+
+		<div id="ranking">
+			<h2>Ranking</h2>
+			<div id="contenedorPuestos"> 
+				<div id="puestos"></div>
+			</div>
+		</div>
+
+		<!-- END IN GAME -->
+
+	</div>
+
+	<div id="back"></div>
+
+</body>
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/jquery.timer.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/taffy.js"></script>
+
+	<script src="js/index.js"></script>
+
+</html>

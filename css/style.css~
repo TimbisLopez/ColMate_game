@@ -1,0 +1,340 @@
+html, body, .container, .content {
+    height: 100%;
+    background-color: #eff0f2;
+    overflow:hidden;   
+}
+
+.number {
+	display: inline;
+	padding:0.7em;
+	margin:0.1em;
+}
+
+/*.sumaNumber {
+	color : #FF6961;
+}*/
+
+.select {
+	background: #95A5A6;
+	border-radius: 15px;
+}
+
+#juego {
+	margin-top: 20px;
+	max-width: 355px;
+	max-height: 390px;
+	overflow-y:auto;
+	overflow-x:hidden;
+	margin: 0 auto;}
+
+#juego li {
+	list-style: none;
+	display:inline;
+}
+
+#juego ul {
+	padding: 0;
+}
+
+#puntos, #multiplicador {
+	height: 1em;
+	color: #95A5A6;
+}
+
+#juego h3 {
+	margin-top: 0;
+	padding-top: 0;
+	font-size: 2em;
+}
+
+.container {
+
+	/*margin-top: 35px;*/
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+
+}
+::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    -webkit-border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color: #aaa;
+}
+#numeros {
+	margin-top:10px;
+}
+
+/*#numeros .card{
+
+}*/
+
+.flip {
+  -webkit-perspective: 800;
+   width: 50px;
+   height: 50px;
+    position: relative;
+    margin: 3px;
+   float: left;
+}
+.flip .card.flipped {
+  -webkit-transform: rotatey(-180deg);
+}
+.flip .card {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+}
+.flip .card .face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden ;
+  z-index: 2;
+  border-radius: 20px;
+
+}
+
+@-webkit-keyframes bobble {
+  33% {
+    -webkit-transform: rotate(6deg);
+    transform: rotate(6deg);
+  }
+
+  66% {
+    -webkit-transform: rotate(-6deg);
+    transform: rotate(-6deg);
+  }
+}
+
+@keyframes bobble {
+  33% {
+    -webkit-transform: rotate(6deg);
+    transform: rotate(6deg);
+  }
+
+  66% {
+    -webkit-transform: rotate(-6deg);
+    transform: rotate(-6deg);
+  }
+}
+
+.flip .card .front {
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+  -webkit-animation: bobble 5s ease-in-out infinite;
+  animation: bobble 5s ease-in-out infinite;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+  -webkit-transition: padding .3s, bottom .3s;
+  transition: padding .3s, bottom .3s;
+  box-shadow: 2px -2px 0px rgba(0,0,0,.1), inset -5px -10px rgba(0,0,0,.08);
+}
+.flip .card .back {
+  -webkit-transform: rotatey(180deg);
+  cursor: pointer;
+  font-size: 1.3em;
+  text-align: center;
+  padding: 6px;
+  box-shadow: 2px -2px 0px rgba(0,0,0,.1), inset -5px -5px rgba(0,0,0,.08);
+  color: #fff;
+  font-weight: bold;
+}
+
+.but{
+  display: block;
+  position: absolute;
+  width: 18px;
+  height: 15px;
+  margin: 25px 6px;
+  border-radius: 90%;
+  line-height: 0;
+  box-shadow: inset -3px -3px rgba(0,0,0,.4);
+}
+.butRight {
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  margin: 25px 18px;
+  border-radius: 90%;
+  line-height: 0;
+  box-shadow: inset -3px -3px rgba(0,0,0,.4);
+}
+.mouth {
+  display: block;
+  width: 60%;
+  height: 15px;
+  margin: -15px auto 0;
+  background: rgba(0,0,0,.9);
+  border-radius: 50% 50%  15px 15px;
+  -webkit-transition: border-radius .5s, height .5s cubic-bezier(.15,.60,.30,1.9);
+  transition: border-radius .5s, height .5s cubic-bezier(.15,.60,.30,1.9);
+  overflow: hidden;
+  line-height: 0;
+  -webkit-transform-origin: center top;
+  transform-origin: center top;
+}
+
+.eye {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin: 10px;
+  background: rgba(0,0,0,.9);
+  border-radius: 10px;
+  border-radius: 50%;
+}
+
+@-webkit-keyframes blink {
+  90% {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  95% {
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+}
+
+@keyframes blink {
+  90% {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  95% {
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+}
+
+.color1 {
+    background-color: #B19CD9;
+}
+.color2 {
+    background-color: #FFF000;
+}
+.color3 {
+    background-color: #FDFD96;
+}
+.color4 {
+    background-color: #AEC6CF;
+}
+.color5 {
+    background-color: #FF6961;
+}
+.color6 {
+    background-color: #F49AC2;
+}
+.color7 {
+    background-color: #0ABAB5;
+}
+.color8 {
+    background-color: #002366;
+}
+.color9 {
+    background-color: #FF4040;
+}
+.color10 {
+    background-color: #4B5320;
+}
+.color11 {
+    background-color: #98FF98;
+}
+.color12 {
+    background-color: #CFB53B;
+}
+.color13 {
+    background-color: #EC3B83;
+}
+.color14 {
+    background-color: #FFB347;
+}
+.color15 {
+    background-color: #00BFFF;
+}
+.color16 {
+    background-color: #8B0000;
+}
+.color17 {
+    background-color: #FFF44F;
+}
+.color18 {
+    background-color: #DFFF00;
+}
+.color19 {
+    background-color: #B87333;
+}
+.color20 {
+    background-color: #4CBB17;
+}
+.color21 {
+    background-color: #C0C0C0;
+}
+.color22 {
+    background-color: #00308F;
+}
+.color23 {
+    background-color: #00FFEF;
+}
+.color24 {
+    background-color: #A32638;
+}
+.color25 {
+    background-color: #B2BEB5;
+}
+.color26 {
+    background-color: #996515;
+}
+.color27 {
+    background-color: #FF77FF;
+}
+.color28 {
+    background-color: #779ECB;
+}
+.color29 {
+    background-color: #FF4500;
+}
+.color30 {
+    background-color: #FF007F;
+}
+.parpadeo6, .parpadeo15, .parpadeo18 {
+  -webkit-animation: blink 4s ease-in-out infinite;
+  animation: blink 4s ease-in-out infinite;
+}
+.parpadeo3, .parpadeo12, .parpadeo17, .parpadeo26 {
+  -webkit-animation: blink 5.5s ease-in-out infinite;
+  animation: blink 5.5s ease-in-out infinite;
+}
+.parpadeo5, .parpadeo7, .parpadeo21, .parpadeo25  {
+  -webkit-animation: blink 5s ease-in-out infinite;
+  animation: blink 5s ease-in-out infinite;
+}
+.parpadeo8, .parpadeo11, .parpadeo27, .parpadeo10 {
+  -webkit-animation: blink 3s ease-in-out infinite;
+  animation: blink 3s ease-in-out infinite;
+}
+.parpadeo13, .parpadeo22, .parpadeo28 {
+  -webkit-animation: blink 2s ease-in-out infinite;
+  animation: blink 2s ease-in-out infinite;
+}
+.parpadeo4, .parpadeo16, .parpadeo23, .parpadeo29  {
+  -webkit-animation: blink 3.5s ease-in-out infinite;
+  animation: blink 3.5s ease-in-out infinite;
+}
+.parpadeo2, .parpadeo19, .parpadeo30, .parpadeo1  {
+  -webkit-animation: blink 4.5s ease-in-out infinite;
+  animation: blink 4.5s ease-in-out infinite;
+}
+.parpadeo20, .parpadeo24, .parpadeo9, .parpadeo14 {
+  -webkit-animation: blink 2.5s ease-in-out infinite;
+  animation: blink 2.5s ease-in-out infinite;
+}
